@@ -1,3 +1,246 @@
-*{
-    background-color: red;
+/* Réinitialisation CSS */
+
+/* Règles de dimensionnement des boîtes */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
+
+/* Supprimer les marges et les espacements par défaut */
+body,
+h1, h2, h3, h4, h5, h6,
+p,
+ol, ul,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+/* Supprimer les styles de liste (puces/numéros) */
+ul, ol {
+  list-style: none;
+}
+
+/* Supprimer les marges de bloc */
+blockquote,
+body,
+button,
+dd,
+dl,
+dt,
+fieldset,
+figure,
+form,
+h1, h2, h3, h4, h5, h6,
+hr,
+li,
+ol,
+p,
+pre,
+td,
+th {
+  margin: 0;
+  padding: 0;
+}
+
+/* Définir les styles de base du corps */
+body {
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Supprimer le fond gris sur les liens actifs dans IE 10 */
+a {
+  background-color: transparent;
+}
+
+/* Réinitialiser les styles de police */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+/* Corriger l'héritage et l'échelle de la taille de police dans tous les navigateurs */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Réinitialiser certains attributs pour la cohérence entre les navigateurs */
+button,
+input,
+select,
+textarea {
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  appearance: none;
+  background-color: transparent;
+  vertical-align: middle;
+  white-space: normal;
+}
+
+/* Supprimer le padding dans Firefox */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* Supprimer le padding dans IE 10 et 11 */
+input::-ms-clear {
+  display: none;
+}
+
+/* Réinitialiser l'opacité sur les anciens navigateurs */
+[hidden] {
+  display: none !important;
+}
+
+/* Réinitialiser les propriétés flexbox et grid */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+template {
+  display: none;
+}
+
+/* Réinitialiser les liens */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Normaliser les marges des titres */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+/* Réinitialiser les listes */
+ul, ol {
+  padding-left: 0;
+  list-style: none;
+}
+
+/* Réinitialiser les citations */
+blockquote {
+  margin: 0;
+  padding: 0;
+}
+
+/* Réinitialiser les formulaires */
+button, input, select, textarea {
+  margin: 0;
+}
+
+/* Réinitialiser les images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Réinitialiser les tableaux */
+table {
+  border-collapse: collapse;
+}
+
+/* Réinitialiser les éléments multimédias */
+audio, canvas, progress, video {
+  display: inline-block;
+}
+
+/* Réinitialiser les règles horizontales */
+hr {
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+}
+
+/* Réinitialiser les ensembles de champs */
+fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+/* Réinitialiser la couleur de la bordure */
+a,
+button,
+input,
+textarea,
+select,
+summary,
+[data-a],
+[data-action],
+[data-block],
+[data-button],
+[data-custom-list],
+[data-definition-list],
+[data-dialog],
+[data-dropdown],
+[data-foundation-megamenu],
+[data-header],
+[data-hero],
+[data-image-text],
+[data-key-benefits],
+[data-login-modal],
+[data-main-content],
+[data-main-menu],
+[data-polygon],
+[data-prefooter],
+[data-prefooter-2],
+[data-quick-facts],
+[data-slideshow],
+[data-sticky-submenu],
+[data-submenu],
+[data-tile],
+[data-topbar],
+[data-type-menu],
+[data-utility-nav],
+[data-what-we-offer] {
+  border-color: inherit;
+}
+
+/* Réinitialiser divers */
+[role="button"] {
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Désactiver la sélection de texte */
+::-moz-selection {
+  background: transparent;
+  text-shadow: none;
+}
+::selection {
+  background: transparent;
+  text-shadow: none;
+}
+
+/* Fin du Reset CSS */
