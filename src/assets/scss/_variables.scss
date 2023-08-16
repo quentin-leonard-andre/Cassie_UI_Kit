@@ -1,0 +1,31 @@
+/** COULEURS **/
+$primary_color: #007bff;
+
+$light_grey_color: #f8f9fa;
+$grey_color: #6c757d;
+$dark_grey_color: #333;
+
+$success_color: #28a745;
+$warning_color: #ffc107;
+$danger_color: #dc3545;
+
+$light_color: #f8f9fa;
+$dark_color: #333;
+
+$border_color: #e9ecef;
+$highlight_color: #dee2e6;
+
+/** ESPACEMENTS **/
+$very_small_space: 2px;
+$small_space: 5px;
+
+/** TAILLES DE POLICES **/
+$normal_font_size: 15px;
+
+/** POLICES **/
+@font-face {
+    font-family: inter;
+    src: url("../../assets/fonts/inter_variable.ttf");
+}
+
+$main_font: inter;
