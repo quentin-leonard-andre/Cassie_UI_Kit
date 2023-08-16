@@ -1,14 +1,17 @@
 <script lang="ts">
   import Link from "../components/Link.vue";
+  import Presenter from "../components/Presentation/Presenter.vue";
+
   export default{
     components: {
-      Link
+      Link,
+      Presenter
     }
   }
 </script>
 
 <template>
-  <div class="row">
+  <Presenter>
     <Link>
       Lien ordinaire
     </Link>
@@ -24,14 +27,9 @@
     >
       Lien bouton
     </Link>
-  </div>
+  </Presenter>
 </template>
 
 <style lang="scss">
   @import "../assets/scss/variables";
-
-  .row{
-    display: flex;
-    gap: $small_space;
-  }
 </style>
