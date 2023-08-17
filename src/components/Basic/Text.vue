@@ -17,5 +17,9 @@
     color: $dark_color;
     font-family: $main_font;
     padding: $small_space;
+
+    &.highlight{
+      color: $text_highlight_color;
+    }
   }
 </style>

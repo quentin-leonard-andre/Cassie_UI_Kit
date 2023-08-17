@@ -2,39 +2,22 @@
   import Link from "../components/Basic/Link.vue";
   import Presenter from "../components/Presentation/Presenter.vue";
 
+  import LinkPresenter from "../components/Presentation/LinkPresenter.vue";
+  import TextPresenter from "../components/Presentation/TextPresenter.vue";
+
   export default{
     components: {
       Link,
-      Presenter
+      Presenter,
+      LinkPresenter,
+      TextPresenter
     }
   }
 </script>
 
 <template>
-  <!-- Liens -->
-  <Presenter
-    
-  >
-    <template v-slot:title>
-      Liens
-    </template>
-
-    <Link>
-      Lien ordinaire
-    </Link>
-
-    <Link
-      :is_primary="true"
-    >
-      Lien primaire
-    </Link>
-
-    <Link
-      :is_button="true"
-    >
-      Lien bouton
-    </Link>
-  </Presenter>
+  <TextPresenter></TextPresenter>
+  <LinkPresenter></LinkPresenter>
 </template>
 
 <style lang="scss">
