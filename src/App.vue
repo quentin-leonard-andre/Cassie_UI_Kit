@@ -3,6 +3,10 @@
 </script>
 
 <template>
+  <!--
   <RouterLink to="/">Accueil</RouterLink>
-  <RouterView />
+  -->
+  <main>
+    <RouterView/>
+  </main>
 </template>

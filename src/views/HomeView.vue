@@ -1,5 +1,5 @@
-<script lang="ts">
-  import Link from "../components/Link.vue";
+<script lang="js">
+  import Link from "../components/Basic/Link.vue";
   import Presenter from "../components/Presentation/Presenter.vue";
 
   export default{
@@ -11,7 +11,14 @@
 </script>
 
 <template>
-  <Presenter>
+  <!-- Liens -->
+  <Presenter
+    
+  >
+    <template v-slot:title>
+      Liens
+    </template>
+
     <Link>
       Lien ordinaire
     </Link>
