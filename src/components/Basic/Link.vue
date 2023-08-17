@@ -24,6 +24,7 @@
     font-size: $normal_font_size;
     font-family: $main_font;
     color: $dark_color;
+    width: fit-content;
 
     &.primary{
       color: $primary_color;

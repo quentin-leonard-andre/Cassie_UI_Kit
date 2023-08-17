@@ -1,12 +1,26 @@
 <script lang="js">
     import Text from "../Basic/Text.vue";
+    import Button from "../Basic/Button.vue";
 
     export default{
         components: {
-            Text
+            Text,
+            Button
         },
         data(){
-            this.direction = 'row';
+            return {
+                direction: 'row'
+            }
+        },
+        methods: {
+            toggleDirection: function(){
+                this.direction = (this.direction == 'row' ? 'column' : 'row');
+            }
+        },
+        computed: {
+            toStringDirection: function(){
+                return (this.direction == 'row' ? 'Afficher en colonnes' : 'Afficher en lignes');
+            }
         }
     }
 </script>
@@ -17,6 +31,10 @@
             <Text>
                 <slot name="title"></slot>
             </Text>
+
+            <Button @click="toggleDirection">
+                {{toStringDirection}}
+            </Button>
         </div>
     
         <div class="content" :class="[direction]">
@@ -41,6 +59,10 @@
             padding: $normal_space;
             padding-top: $small_space;
             padding-bottom: $small_space;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
         }
 
         .content{

@@ -4,13 +4,15 @@
 
   import LinkPresenter from "../components/Presentation/LinkPresenter.vue";
   import TextPresenter from "../components/Presentation/TextPresenter.vue";
+  import ButtonPresenter from "../components/Presentation/ButtonPresenter.vue";
 
   export default{
     components: {
       Link,
       Presenter,
       LinkPresenter,
-      TextPresenter
+      TextPresenter,
+      ButtonPresenter
     }
   }
 </script>
@@ -18,6 +20,7 @@
 <template>
   <TextPresenter></TextPresenter>
   <LinkPresenter></LinkPresenter>
+  <ButtonPresenter></ButtonPresenter>
 </template>
 
 <style lang="scss">
