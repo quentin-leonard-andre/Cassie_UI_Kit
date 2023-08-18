@@ -12,10 +12,6 @@
 
 <template>
   <Presenter>
-    <template v-slot:title>
-      Boutons
-    </template>
-
     <Button type="primary">
       Bouton primaire
     </Button>
