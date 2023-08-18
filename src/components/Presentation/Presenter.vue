@@ -1,11 +1,13 @@
 <script lang="js">
     import Text from "../Basic/Text.vue";
     import Button from "../Basic/Button.vue";
+    import Icon from "../Basic/Icon.vue";
 
     export default{
         components: {
             Text,
-            Button
+            Button,
+            Icon
         },
         data(){
             return {
@@ -17,10 +19,8 @@
                 this.direction = (this.direction == 'row' ? 'column' : 'row');
             }
         },
-        computed: {
-            toStringDirection: function(){
-                return (this.direction == 'row' ? 'Afficher en colonnes' : 'Afficher en lignes');
-            }
+        props: {
+            'is_direction_toggable': false
         }
     }
 </script>
@@ -32,8 +32,8 @@
                 <slot name="title"></slot>
             </Text>
 
-            <Button @click="toggleDirection">
-                {{toStringDirection}}
+            <Button v-if="is_direction_toggable" @click="toggleDirection">
+                <Icon :type="direction"></Icon>
             </Button>
         </div>
     

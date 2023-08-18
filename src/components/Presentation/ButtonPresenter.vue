@@ -11,7 +11,13 @@
 </script>
 
 <template>
-  <Presenter>
+  <Presenter
+    :is_direction_toggable="true"
+  >
+    <template v-slot:title>
+      Boutons
+    </template>
+
     <Button type="primary">
       Bouton primaire
     </Button>

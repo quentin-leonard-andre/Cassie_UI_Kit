@@ -1,10 +1,18 @@
 <script lang="ts">
   export default{
+    props: {
+      font_size: {
+        type: String,
+        default: "normal"
+      }
+    }
   }
 </script>
 
 <template>
-    <p>
+    <p
+      :class="{'small_font_size': font_size=='small'}"
+    >
         <slot></slot>
     </p>
 </template>
@@ -20,6 +28,9 @@
 
     &.highlight{
       color: $text_highlight_color;
+    }
+    &.small_font_size{
+      font-size: $small_font_size;
     }
   }
 </style>

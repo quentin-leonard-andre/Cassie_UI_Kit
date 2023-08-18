@@ -26,6 +26,9 @@
     color: $dark_color;
     background-color: $light_color;
     width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     &.primary{
       background-color: $primary_color;
