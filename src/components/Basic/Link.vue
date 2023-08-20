@@ -1,9 +1,15 @@
 <script lang="ts">
   export default{
-    props: [
-      'is_button',
-      'is_primary'
-    ]
+    props: {
+      is_button: {
+        type: Boolean,
+        default: false
+      },
+      is_primary: {
+        type: Boolean,
+        default: false
+      },
+    }
   }
 </script>
 

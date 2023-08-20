@@ -1,32 +1,15 @@
-<script lang="js">
-  import Link from "../components/Basic/Link.vue";
-  import Presenter from "../components/Presentation/Presenter.vue";
-
-  import ColorPresenter from "../components/Presentation/ColorPresenter.vue";
-  import LinkPresenter from "../components/Presentation/LinkPresenter.vue";
-  import TextPresenter from "../components/Presentation/TextPresenter.vue";
-  import ButtonPresenter from "../components/Presentation/ButtonPresenter.vue";
-  import IconPresenter from "../components/Presentation/IconPresenter.vue";
+<script lang="ts">
+  import Text from "../components/Basic/Text.vue";
 
   export default{
     components: {
-      Link,
-      Presenter,
-      LinkPresenter,
-      TextPresenter,
-      ButtonPresenter,
-      ColorPresenter,
-      IconPresenter
+      Text
     }
   }
 </script>
 
 <template>
-  <ColorPresenter></ColorPresenter>
-  <TextPresenter></TextPresenter>
-  <LinkPresenter></LinkPresenter>
-  <ButtonPresenter></ButtonPresenter>
-  <IconPresenter></IconPresenter>
+  
 </template>
 
 <style lang="scss">

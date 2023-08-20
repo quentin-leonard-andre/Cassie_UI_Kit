@@ -31,6 +31,7 @@
         >
         </Icon>
         <Text
+            type="span"
             font_size="small"
         >{{ type }}</Text>
     </div>
