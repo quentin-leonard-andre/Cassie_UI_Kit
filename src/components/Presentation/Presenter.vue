@@ -9,7 +9,9 @@
             Button,
             Icon
         },
-        data(){
+        data(
+            props
+        ){
             return {
                 direction: 'row'
             }

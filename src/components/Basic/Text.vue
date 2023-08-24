@@ -12,6 +12,14 @@
       uppercase: {
         type: Boolean, 
         default: false
+      },
+      padding: {
+        type: Number,
+        default: null
+      },
+      for_identifier: {
+        type: String,
+        default: ""
       }
     }
   }
@@ -22,6 +30,7 @@
       :is="type"
       class="text"
       :class="{'small_font_size': font_size=='small', 'title_font_size': font_size=='title', 'uppercase': uppercase}"
+      :for="(for_identifier ? for_identifier : null)"
     >
         <slot></slot>
   </component>
@@ -34,7 +43,6 @@
     font-size: $normal_font_size;
     color: $dark_color;
     font-family: $main_font;
-    padding: $small_space;
     user-select: text;
 
     &.highlight{

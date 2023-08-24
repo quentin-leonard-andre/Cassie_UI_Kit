@@ -1,20 +1,21 @@
 <script lang="js">
   import Presenter from "../components/Presentation/Presenter.vue";
+  import InputPresenter from "../components/Presentation/InputPresenter.vue";
+  import InputGroupPresenter from "../components/Presentation/InputGroupPresenter.vue";
 
   export default{
     components: {
-      Presenter
+      Presenter,
+      InputPresenter,
+      InputGroupPresenter
     }
   }
 </script>
 
 <template>
   <div id="presenters">
-    <ColorPresenter></ColorPresenter>
-    <TextPresenter></TextPresenter>
-    <LinkPresenter></LinkPresenter>
-    <ButtonPresenter></ButtonPresenter>
-    <IconPresenter></IconPresenter>
+    <InputPresenter></InputPresenter>
+    <InputGroupPresenter></InputGroupPresenter>
   </div>
 </template>
 
@@ -25,5 +26,6 @@
     display: flex;
     flex-direction: column;
     gap: $normal_space;
+    width: 100%;
   }
 </style>

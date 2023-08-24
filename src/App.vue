@@ -35,7 +35,7 @@
     </nav>
   </header>
 
-  <main>
+  <main id="main">
     <div>
       <RouterView/>
     </div>
@@ -65,6 +65,18 @@
           color: $primary_color;
         }
       }
+    }
+  }
+
+  main#main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    & > div{
+      width: 100%;
+      max-width: 1000px;
     }
   }
 </style>

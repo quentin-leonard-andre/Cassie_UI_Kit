@@ -38,5 +38,6 @@
     display: flex;
     flex-direction: column;
     gap: $normal_space;
+    width: 100%;
   }
 </style>
