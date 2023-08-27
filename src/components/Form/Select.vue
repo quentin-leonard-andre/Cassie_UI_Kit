@@ -3,6 +3,10 @@
         components: {
         },
         props: {
+            id: {
+                type: String,
+                default: ''
+            },
             options: {
                 type: Array,
                 default: []
@@ -16,7 +20,9 @@
 </script>
 
 <template>
-   <select>
+   <select
+    :id="id"
+   >
         <option selected disabled>{{ placeholder }}</option>
         <option v-for="option in options">
             {{ option }}
@@ -38,6 +44,10 @@
 
         &:focus{
         outline: 1px solid $primary_color;
+        }
+
+        option:hover{
+           background-color: red!important;
         }
     }
 </style>

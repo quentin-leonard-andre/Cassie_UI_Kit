@@ -1,15 +1,17 @@
 <script lang="js">
   import Presenter from "../components/Presentation/Presenter.vue";
   import InputPresenter from "../components/Presentation/InputPresenter.vue";
-  import InputGroupPresenter from "../components/Presentation/InputGroupPresenter.vue";
+  import FormGroupPresenter from "../components/Presentation/FormGroupPresenter.vue";
   import SelectPresenter from "../components/Presentation/SelectPresenter.vue";
+  import CheckboxPresenter from "../components/Presentation/CheckboxPresenter.vue";
 
   export default{
     components: {
       Presenter,
       InputPresenter,
-      InputGroupPresenter,
-      SelectPresenter
+      FormGroupPresenter,
+      SelectPresenter,
+      CheckboxPresenter
     }
   }
 </script>
@@ -17,8 +19,9 @@
 <template>
   <div id="presenters">
     <InputPresenter></InputPresenter>
-    <InputGroupPresenter></InputGroupPresenter>
     <SelectPresenter></SelectPresenter>
+    <FormGroupPresenter></FormGroupPresenter>
+    <CheckboxPresenter></CheckboxPresenter>
   </div>
 </template>
 

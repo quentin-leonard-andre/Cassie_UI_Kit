@@ -1,11 +1,11 @@
 <script lang="js">
     import Presenter from "./Presenter.vue";
-    import InputGroup from "../Form/InputGroup.vue";
+    import Checkbox from "../Form/Checkbox.vue";
 
     export default{
         components: {
             Presenter,
-            InputGroup
+            Checkbox
         }
     }
 </script>
@@ -15,16 +15,13 @@
     direction="column"
   >
     <template v-slot:title>
-      Groupes de champs de saisie
+      Checkbox
     </template>
 
-    <InputGroup 
-        input_id="simple_label"
-        label="Champs avec label"
-        type="text"
-        placeholder="Saisir du texte ici ..."
-    >
-    </InputGroup>
+    <Checkbox
+        id="simple_checkbox"
+        label="Case à cocher"
+    />
   </Presenter>
 </template>
 
