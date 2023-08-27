@@ -36,6 +36,11 @@
         placeholder="Champs de saisie date ..."
         type="date"
     ></Input>
+
+    <Input
+        placeholder="Champs de saisie fichier ..."
+        type="file"
+    ></Input>
   </Presenter>
 </template>
 

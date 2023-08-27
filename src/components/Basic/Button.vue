@@ -30,6 +30,10 @@
     align-items: center;
     justify-content: center;
 
+    &:focus{
+      outline: 1px solid $primary_color;;
+    }
+
     &.primary{
       background-color: $primary_color;
       color: $light_color;
