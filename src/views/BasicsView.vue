@@ -7,6 +7,7 @@
   import TextPresenter from "../components/Presentation/TextPresenter.vue";
   import ButtonPresenter from "../components/Presentation/ButtonPresenter.vue";
   import IconPresenter from "../components/Presentation/IconPresenter.vue";
+  import AlertPresenter from "../components/Presentation/AlertPresenter.vue";
 
   export default{
     components: {
@@ -16,7 +17,8 @@
       TextPresenter,
       ButtonPresenter,
       ColorPresenter,
-      IconPresenter
+      IconPresenter,
+      AlertPresenter
     }
   }
 </script>
@@ -28,6 +30,7 @@
     <LinkPresenter></LinkPresenter>
     <ButtonPresenter></ButtonPresenter>
     <IconPresenter></IconPresenter>
+    <AlertPresenter></AlertPresenter>
   </div>
 </template>
 
