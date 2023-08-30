@@ -2,17 +2,18 @@
     import Text from "../Basic/Text.vue";
 
     export default{
-        components: {
-            Text
-        },
         props: {
             id: {
                 type: String,
                 default: null
             },
+            name: {
+                type: String,
+                default: null
+            },
             label: {
-                type: String, 
-                default: ''
+                type: String,
+                default: null
             },
             full: {
                 type: Boolean,
@@ -22,15 +23,19 @@
                 type: Boolean,
                 default: false
             }
+        },
+        components: {
+            Text
         }
     }
 </script>
 
 <template>
-    <div class="checkbox_container" :class="{'full': full}">
+    <div class="radio_input_container" :class="{'full': full}">
         <input 
             :id="id"
-            type="checkbox"
+            :name="name"
+            type="radio"
             :checked="checked"
         >
         <Text 
@@ -46,18 +51,18 @@
 <style lang="scss" scoped>
     @import "../../assets/scss/variables";
 
-    .checkbox_container{
+    .radio_input_container{
         display: flex;
         gap: $small_space;
         align-items: center;
 
-        input[type=checkbox]{
+        input[type=radio]{
             width: 15px;
             height: 15px;
         }
 
         &.full{
-            input[type=checkbox]{
+            input[type=radio]{
                 display: none;
             }
 
@@ -69,7 +74,7 @@
                 cursor: pointer;
             }
 
-            input[type="checkbox"]:checked + label {
+            input[type="radio"]:checked + label {
                 background-color: $primary_color;
                 color: $light_color;
             }

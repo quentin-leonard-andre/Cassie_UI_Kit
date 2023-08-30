@@ -13,7 +13,7 @@
             props
         ){
             return {
-                direction: 'row'
+                direction: props.initial_direction
             }
         },
         methods: {
@@ -22,7 +22,14 @@
             }
         },
         props: {
-            'is_direction_toggable': false
+            is_direction_toggable: {
+                type: Boolean,
+                default: false
+            },
+            initial_direction: {
+                type: String,
+                default: 'row'
+            }
         }
     }
 </script>

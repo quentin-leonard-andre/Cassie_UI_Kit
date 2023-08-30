@@ -4,6 +4,7 @@
   import FormGroupPresenter from "../components/Presentation/FormGroupPresenter.vue";
   import SelectPresenter from "../components/Presentation/SelectPresenter.vue";
   import CheckboxPresenter from "../components/Presentation/CheckboxPresenter.vue";
+  import RadioInputPresenter from "../components/Presentation/RadioInputPresenter.vue";
 
   export default{
     components: {
@@ -11,7 +12,8 @@
       InputPresenter,
       FormGroupPresenter,
       SelectPresenter,
-      CheckboxPresenter
+      CheckboxPresenter,
+      RadioInputPresenter
     }
   }
 </script>
@@ -22,6 +24,7 @@
     <SelectPresenter></SelectPresenter>
     <FormGroupPresenter></FormGroupPresenter>
     <CheckboxPresenter></CheckboxPresenter>
+    <RadioInputPresenter></RadioInputPresenter>
   </div>
 </template>
 
