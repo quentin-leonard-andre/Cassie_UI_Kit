@@ -32,6 +32,10 @@
       <RouterLink active-class="router_link_active" to="/forms">
         <Link>Formulaires</Link>
       </RouterLink>
+
+      <RouterLink active-class="router_link_active" to="/navigations">
+        <Link>Navigations</Link>
+      </RouterLink>
     </nav>
   </header>
 

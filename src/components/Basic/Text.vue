@@ -44,6 +44,7 @@
     color: $dark_color;
     font-family: $main_font;
     user-select: text;
+    display: flex;
 
     &.highlight{
       color: $text_highlight_color;

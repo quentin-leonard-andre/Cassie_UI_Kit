@@ -9,13 +9,22 @@
         type: Boolean,
         default: false
       },
+      href: {
+        type: String,
+        default: '#'
+      },
+      full_width: {
+        type: Boolean,
+        default: false
+      }
     }
   }
 </script>
 
 <template>
     <a
-      :class="{'button': is_button, 'primary': is_primary}"
+      :class="{'button': is_button, 'primary': is_primary, 'full_width': full_width}"
+      :href="href"
     >
       <slot></slot>
     </a>
@@ -39,6 +48,10 @@
     &.button{
       background-color: $highlight_color;
       border-radius: $very_small_space;
+    }
+
+    &.full_width{
+      width: 100%;
     }
   }
 </style>
