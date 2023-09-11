@@ -44,7 +44,8 @@
                 {
                   type: 'link',
                   title: 'Mon premier lien',
-                  href: '/basics'
+                  href: '/basics',
+                  icon: 'check'
                 },
                 {
                   type: 'link',
@@ -56,7 +57,8 @@
             {
               type: 'link',
               title: 'Mon premier lien',
-              href: '/basics'
+              href: '/basics',
+              icon: 'info'
             }
           ]
         "

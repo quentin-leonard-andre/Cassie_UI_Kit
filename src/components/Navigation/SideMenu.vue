@@ -1,6 +1,7 @@
 <script lang="js">
   import Text from "../Basic/Text.vue";
   import Link from "../Basic/Link.vue";
+  import Icon from "../Basic/Icon.vue";
 
   export default{
     props: {
@@ -11,7 +12,8 @@
     },
     components: {
         Text,
-        Link
+        Link,
+        Icon
     },
     methods: {
     }
@@ -47,6 +49,7 @@
                                 full_width
                                 class="category_child"
                             >
+                                <Icon v-if="subcontent_content.icon" :type="subcontent.icon"></Icon>
                                 {{ subcontent_content.title }}
                             </Link>
                         </Text>
@@ -58,6 +61,7 @@
                         type="li" 
                     >
                         <Link href="/basics" full_width>
+                            <Icon v-if="subcontent.icon" :type="subcontent.icon"></Icon>
                             {{ subcontent.title }}
                         </Link>
                     </Text>
@@ -83,11 +87,20 @@
                 padding: 0px;
                 border-bottom: 1px solid $border_color;
                 
+                .icon{
+                    transform: scale(0.8);
+                    flex-shrink: 0;
+                }
+                
                 &:not(.submenu_title):hover{
                     background-color: $primary_color;
 
                     & > a{
                         color: $light_color;
+                    }
+
+                    & .icon{
+                        fill: $light_color;
                     }
                 }
 
@@ -97,7 +110,7 @@
 
                 a{
                     &.category_child{
-                        padding-left: $normal_space;
+                        padding-left: $big_space;
                     }
                 }
 

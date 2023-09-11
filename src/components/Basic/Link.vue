@@ -40,6 +40,9 @@
     font-family: $main_font;
     color: $dark_color;
     width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: $small_space;
 
     &.primary{
       color: $primary_color;

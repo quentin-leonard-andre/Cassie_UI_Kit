@@ -51,4 +51,8 @@
 
 <style lang="scss" scoped>
   @import "../../assets/scss/variables";
+
+  svg.icon{
+    fill: $dark_color;
+  }
 </style>
