@@ -8,7 +8,16 @@
         content: {
             type: Array,
             default: []
+        },
+        fullscreenable: {
+            type: Boolean,
+            default: true
         }
+    },
+    data(){
+        return {
+            is_open_fullscreen: false
+        };
     },
     components: {
         Text,
@@ -21,7 +30,35 @@
 </script>
 
 <template>
-    <div class="sidemenu">
+    <!-- Bouton fullscreen -->
+    <template v-if="fullscreenable">
+        <div 
+            v-if="!is_open_fullscreen"
+            class="sidenav_fullscreen_button"
+            @click="is_open_fullscreen = true"
+        >
+            <Icon 
+                type="menu" 
+                width="100%"
+            >
+            </Icon>
+        </div>
+
+        <div 
+            v-else
+            class="sidenav_fullscreen_button"
+            @click="is_open_fullscreen = false"
+        >
+            <Icon 
+                type="cancel" 
+                width="100%"
+            >
+            </Icon>
+        </div>
+    </template>
+    <!-- Fin bouton fullscreen -->
+
+    <div class="sidemenu" :class="{'fullscreenable': fullscreenable, 'fullscreen': is_open_fullscreen}">
         <ul>
             <template
                 v-for="subcontent in content"
@@ -118,6 +155,45 @@
                     background-color: $border_color;
                 }
             }
+        }
+
+        &.fullscreenable{
+            @media screen and (max-width: 768px){
+                display: none;
+
+                &.fullscreen{
+                    z-index: 4;
+                    position: fixed;
+                    top: 0px;
+                    left: 0px;
+                    width: 100%;
+                    max-width: 100%!important;
+                    height: 100vh;
+                    display: flex;
+
+                    padding-top: 40px;
+
+                    ul{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    div.sidenav_fullscreen_button{
+        display: flex;
+        align-items: center;
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        width: 25px;
+        z-index: 5;
+
+        cursor: pointer;
+
+        @media screen and (min-width: 768px){
+            display: none;
         }
     }
 </style>

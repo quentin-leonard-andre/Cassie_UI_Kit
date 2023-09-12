@@ -2,11 +2,13 @@
   import { RouterLink, RouterView } from 'vue-router';
   import Text from "./components/Basic/Text.vue";
   import Link from "./components/Basic/Link.vue";
+  import SideMenu from "./components/Navigation/SideMenu.vue";
 
   export default{
     components: {
       Text,
-      Link
+      Link,
+      SideMenu
     }
   }
 </script>
@@ -19,28 +21,38 @@
     <RouterLink to="/">
       <img src="./assets/img/cassie_logo.png" alt="Logo" width="75"/>
     </RouterLink>
-   
-    <nav>
-      <RouterLink active-class="router_link_active" to="/">
-        <Link>Accueil</Link>
-      </RouterLink>
-
-      <RouterLink active-class="router_link_active" to="/basics">
-        <Link>Composants basiques</Link>
-      </RouterLink>
-      
-      <RouterLink active-class="router_link_active" to="/forms">
-        <Link>Formulaires</Link>
-      </RouterLink>
-
-      <RouterLink active-class="router_link_active" to="/navigations">
-        <Link>Navigations</Link>
-      </RouterLink>
-    </nav>
   </header>
 
   <main id="main">
-    <div>
+    <SideMenu
+      :content="
+        [
+          {
+            type: 'category',
+            title: 'Composants',
+            content: [
+              {
+                type: 'link',
+                title: 'Basiques',
+                href: '/basics'
+              },
+              {
+                type: 'link',
+                title: 'Formulaires',
+                href: '/forms'
+              },
+              {
+                type: 'link',
+                title: 'Navigation',
+                href: '/navigations'
+              }
+            ]
+          }
+        ]
+      "
+    >
+    </SideMenu>
+    <div id="main_content">
       <RouterView/>
     </div>
   </main>
@@ -49,15 +61,19 @@
 <style lang="scss">
   @import "./assets/scss/variables";
 
-  header#main_header{
+  #app{
     display: flex;
     flex-direction: column;
+    height: 100vh;
+  }
+
+  header#main_header{
+    display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: $big_space;
+    flex-direction: column;
     padding: $big_space;
     gap: $big_space;
-    border-bottom: 1px solid $border_color;
 
     nav{
       display: flex;
@@ -74,13 +90,25 @@
 
   main#main{
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
+    overflow: hidden;
 
-    & > div{
+    #main_content, .sidemenu{
       width: 100%;
-      max-width: 1000px;
+      height: 100%;
+      overflow: auto;
+
+      &#main_content{
+        padding: 0px $big_space;
+        padding-bottom: $big_space;
+      }
+
+      &.sidemenu{
+        max-width: 200px;
+        height: 100%;
+        overflow: auto;
+      }
     }
   }
 </style>

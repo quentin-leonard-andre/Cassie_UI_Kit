@@ -57,7 +57,6 @@
 
     div.presenter{
 
-        margin: $normal_space;
         border: 1px $border_color solid;
         border-radius: $very_small_space;
         display: flex;

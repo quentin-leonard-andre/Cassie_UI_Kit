@@ -19,6 +19,7 @@
 
     <div class="sidemenu_presenter_container">
       <SideMenu
+        :fullscreenable="false"
         :content="
           [
             {
