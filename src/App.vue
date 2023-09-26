@@ -93,6 +93,7 @@
     justify-content: center;
     align-items: stretch;
     overflow: hidden;
+    height: 100%;
 
     #main_content, .sidemenu{
       width: 100%;

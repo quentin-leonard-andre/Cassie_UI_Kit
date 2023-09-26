@@ -71,6 +71,6 @@
 
 <style lang="scss">
   .sidemenu_presenter_container{
-    height: 800px;
+    height: fit-content;
   }
 </style>

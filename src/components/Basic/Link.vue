@@ -34,7 +34,6 @@
   @import "../../assets/scss/variables";
 
   a{
-    padding: $small_space;
     cursor: pointer;
     font-size: $normal_font_size;
     font-family: $main_font;
@@ -51,6 +50,7 @@
     &.button{
       background-color: $highlight_color;
       border-radius: $very_small_space;
+      padding: $very_small_space;
     }
 
     &.full_width{

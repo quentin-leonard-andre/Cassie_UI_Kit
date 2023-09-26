@@ -1,11 +1,13 @@
 <script lang="js">
   import Presenter from "../components/Presentation/Presenter.vue";
   import SideMenuPresenter from "../components/Presentation/SideMenuPresenter.vue";
+  import BreadcrumbPresenter from "../components/Presentation/BreadcrumbPresenter.vue";
 
   export default{
     components: {
       Presenter,
-      SideMenuPresenter
+      SideMenuPresenter,
+      BreadcrumbPresenter
     }
   }
 </script>
@@ -13,6 +15,7 @@
 <template>
   <div id="presenters">
     <SideMenuPresenter></SideMenuPresenter>
+    <BreadcrumbPresenter></BreadcrumbPresenter>
   </div>
 </template>
 
